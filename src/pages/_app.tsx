@@ -10,9 +10,9 @@ const Wrapper = ({ children }: { children: ReactNode }) => {
   const [theme] = useTheme();
   return (
     <div className={clsx(theme)}>
-      <div className="border-gray-200 bg-gray-100 text-gray-800 dark:border-gray-900 dark:bg-gray-900 dark:text-white">
+      <div className="flex min-h-screen flex-col border-gray-200 bg-gray-100 text-gray-800 dark:border-gray-900 dark:bg-gray-900 dark:text-white">
         <Header />
-        <main className="container mx-auto">{children}</main>
+        <main className="container mx-auto flex-1">{children}</main>
         <Footer />
       </div>
     </div>
