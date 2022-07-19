@@ -21,7 +21,9 @@ function Card({ title, description, image, slug, readTime }: Props) {
             }`}
           />
           <h2 className="mt-2 text-2xl font-bold">{title}</h2>
-          <p className="text-2xl text-gray-600">{description}</p>
+          <p className="mt-4 text-xl text-gray-500 dark:text-gray-400">
+            {description}
+          </p>
         </div>
       </a>
     </Link>
