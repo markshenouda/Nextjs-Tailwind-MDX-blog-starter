@@ -9,7 +9,7 @@ const Home: NextPage = () => {
           <Card
             title="Lorem ipsum dolor sit, amet consectetur adipisicing elit."
             image="/demo.jpeg"
-            slug="/test"
+            slug="/posts/test"
             readTime="6"
             description="Repudiandae illum aperiam debitis aut rem labore laboriosam praesentium sequi recusandae, hic error consequuntur nisi. Repellat totam itaque quis sit accusamus possimus."
           />
