@@ -1,11 +1,13 @@
 import Link from "next/link";
+import Image from "next/image";
+import clsx from "clsx";
 
 interface Props {
   title: string;
   description?: string;
   image: string;
   slug: string;
-  readTime: string;
+  readTime: number;
 }
 
 function Card({ title, description, image, slug, readTime }: Props) {
@@ -13,14 +15,15 @@ function Card({ title, description, image, slug, readTime }: Props) {
     <Link href={slug}>
       <a>
         <div className="m-2">
-          <img
+          <div className={clsx("w-full relative", description ? 'h-[500px]' : 'h-64')}>
+          <Image
             src={image}
             alt=""
-            className={` w-full rounded-xl object-cover ${
-              description ? "h-[500px]" : "h-56"
-            }`}
+            className={`  rounded-xl object-cover`}
+            layout="fill"
           />
-          <h2 className="mt-2 text-2xl font-bold">{title}</h2>
+          </div>
+          <h2 className="mt-4 text-2xl font-bold">{title}</h2>
           <p className="mt-4 text-xl text-gray-500 dark:text-gray-400">
             {description}
           </p>
