@@ -22,33 +22,21 @@ const Home: NextPage<Props> = ({ posts }) => {
           {posts[0] && (
             <Card
               title={posts[0].data.title}
-              image="/demo.jpeg"
-              slug="/posts/markdown-guide"
-              readTime="6"
+              image={posts[0].data.image}
+              slug={`/posts/${posts[0].slug}`}
+              readTime={posts[0].readTime}
               description="Repudiandae illum aperiam debitis aut rem labore laboriosam praesentium sequi recusandae, hic error consequuntur nisi. Repellat totam itaque quis sit accusamus possimus."
             />
           )}
         </div>
         <div className="col-span-1 flex flex-col gap-4">
-          {/* <Card
-            title="Lorem ipsum dolor sit, amet consectetur."
-            image="/demo.jpeg"
-            slug="/test"
-            readTime="6"
-          />
-          <Card
-            title="Lorem ipsum dolor sit, amet consectetur."
-            image="/demo.jpeg"
-            slug="/test"
-            readTime="6"
-          /> */}
           {posts.slice(1, 3).map((post) => (
             <Card
             key={post.slug}
               title={post.data.title}
-              image="/demo.jpeg"
+              image={post.data.image}
               slug={`/posts/${post.slug}`}
-              readTime="6"
+              readTime={post.readTime}
             />
           ))}
         </div>
@@ -58,9 +46,9 @@ const Home: NextPage<Props> = ({ posts }) => {
           <Card
             key={post.slug}
             title={post.data.title}
-            image="/demo.jpeg"
+            image={post.data.image}
             slug={`/posts/${post.slug}`}
-            readTime="6"
+            readTime={post.readTime}
           />
         ))}
       </div>
